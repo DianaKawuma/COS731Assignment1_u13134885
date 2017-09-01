@@ -1,0 +1,23 @@
+spring:
+    application:
+        name: Bellisimo
+
+    datasource:
+        url:  jdbc:postgresql://127.0.0.1:5433/bellisimo
+        username: diana
+        password: rachevei
+    jpa:
+        database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+        database: POSTGRESQL
+        show_sql: false
+        hibernate:
+            ddl-auto: create-drop
+            naming-strategy: org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy
+
+        properties:
+            hibernate.cache.use_second_level_cache: false
+            hibernate.cache.use_query_cache: false
+            hibernate.generate_statistics: false
+
+server:
+    port: 9005
