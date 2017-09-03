@@ -3,11 +3,11 @@
 /*       'Open Sans', sans-serif     */
 
 
-@import "C:/Users/Diana/Documents/GitHub/COS731Assignment1_u13134885/Assignment 1/Coding/bellisimo-web/node_modules/bootstrap/dist/css/reset.css";
-@import "C:/Users/Diana/Documents/GitHub/COS731Assignment1_u13134885/Assignment 1/Coding/bellisimo-web/node_modules/bootstrap/dist/css/grid.css";
-@import "C:/Users/Diana/Documents/GitHub/COS731Assignment1_u13134885/Assignment 1/Coding/bellisimo-web/node_modules/bootstrap/dist/css/menu.css";
+@import "../css/reset.css";
+@import "../css/grid.css";
+@import "../css/menu.css";
 
-@import "C:/Users/Diana/Documents/GitHub/COS731Assignment1_u13134885/Assignment 1/Coding/bellisimo-web/node_modules/bootstrap/dist/css/font-awesome.css";
+@import "../css/font-awesome.css";
 
 input {
 	outline:  none !important;
@@ -116,7 +116,7 @@ ul.list {
 
 ul.list li {
 	padding-left: 33px;
-	background: url(marker.png) 0 6px no-repeat;
+	background: url(../images/marker.png) 0 6px no-repeat;
 
 }
 ul.list li+li {
@@ -290,7 +290,7 @@ h1 a img {
 
 
 .socials a.last {
-	background: url(pint.png) center 0 no-repeat #fff;
+	background: url(../images/pint.png) center 0 no-repeat #fff;
 }
 
 .socials a:hover {
@@ -372,7 +372,7 @@ top: 2px;
 	opacity: 0;
 	right: 0;
 	height: 100%;
-	background: url(overlay.png) 0 0 repeat;
+	background: url(../images/overlay.png) 0 0 repeat;
 	transition: 0.5s ease;
 	-o-transition: 0.5s ease;
 	-webkit-transition: 0.5s ease;
@@ -394,7 +394,7 @@ top: 2px;
 }
 
 .block1.blur  img {
-	filter: url(C:/Users/Diana/Documents/GitHub/COS731Assignment1_u13134885/Assignment 1/Coding/bellisimo-web/node_modules/bootstrap/dist/js/blur.svg#blur);
+	filter: url(../js/blur.svg#blur);
 }
 
 .block1:hover img {
@@ -435,7 +435,7 @@ top: 2px;
 	display: block;
 	position: absolute;
 	content: '';
-	background: url(link_marker.png) right 0 no-repeat;
+	background: url(../images/link_marker.png) right 0 no-repeat;
 	right: -27px;
 	width: 16px;
 	height: 8px;
@@ -666,7 +666,7 @@ a.gal span {
 	right: 0;
 	top: 0;
 	bottom: 0;
-	background: url(magnify.png) -100% center no-repeat;
+	background: url(../images/magnify.png) -100% center no-repeat;
 }
 
 a.gal:hover span {
@@ -757,7 +757,7 @@ footer a:hover {
 }
 
 #toTop {
-    background: url("totop.png") no-repeat scroll left 0 rgba(0, 0, 0, 0);
+    background: url("../images/totop.png") no-repeat scroll left 0 rgba(0, 0, 0, 0);
     border: medium none;
     bottom: 70px;
     display: none;
