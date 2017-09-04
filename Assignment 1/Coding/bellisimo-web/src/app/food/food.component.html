@@ -24,16 +24,15 @@
       <a href="#"></a>
       <a href="#" class="last"></a>
     </div>
-    <h1><a href="index.html"><img src="../assets/logo.png" alt="Boo House"></a> </h1>
+    <!--<h1><a (click)="refresh()"[routerLink]="['/home']"><img src="../assets/logo.png" alt="Boo House"></a> </h1> -->
     <div class="menu_block">
-
 
     <nav  id="bt-menu" class="bt-menu bt-menu-open">
         <a href="#" class="bt-menu-trigger"></a>
         <ul>
           <li class="current bt-icon "><a (click)="refresh()"[routerLink]="['/home']">Home</a></li>
-         <li class="bt-icon"><a href="index-1.html">About</a></li>
-         <li class="bt-icon"><a href="index-2.html">Menu</a></li>
+         <!--<li class="bt-icon"><a href="index-1.html">About</a></li> -->
+         <li class="bt-icon"><a (click)="refresh()"[routerLink]="['/foodMenu']">Catalogue</a></li>
          <li class="bt-icon"><a (click)="refresh()"[routerLink]="['/contact']">Contacts</a></li>
         </ul>
     </nav>

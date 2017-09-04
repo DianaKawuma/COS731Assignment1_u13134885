@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import { Location} from '@angular/common';
+import { Router, RouterModule } from '@angular/router';
 import { Directive,ElementRef, Input} from '@angular/core';
 declare var $: any;
 
@@ -11,13 +12,16 @@ declare var $: any;
 export class FoodComponent {
 
   title = 'Food';
-  constructor(private location: Location) { }
- 
+  constructor(private location: Location,private router: Router) { }
+    
     goBack() {
         this.location.back();
     }
     refresh(){
       window.location.reload();
+    }
+        navigate() {
+        this.router.navigate(["foodMenu"]);
     }
 
 }

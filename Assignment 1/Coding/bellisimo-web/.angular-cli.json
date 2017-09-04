@@ -25,7 +25,8 @@
         "../node_modules/bootstrap/dist/css/icomoon.css",
         "../node_modules/bootstrap/dist/css/style.css",
         "../node_modules/bootstrap/dist/css/bootstrap.css",
-        "../node_modules/bootstrap/dist/css/form.css"
+        "../node_modules/bootstrap/dist/css/form.css",
+        "../node_modules/bootstrap/dist/css/touchTouch.css"
       ],
       "scripts": [
          "../node_modules/jquery/dist/jquery.min.js",
@@ -35,8 +36,11 @@
          "../node_modules/jquery/dist/jquery.equalheights.js",
          "../node_modules/jquery/dist/jquery.ui.totop.js",
          "../node_modules/jquery/dist/TMForm.js",
+         "../node_modules/jquery/dist/touchTouch.jquery.js",
+         "../node_modules/jquery/dist/jquery.tabs.min.js",
          "../node_modules/jquery/dist/jquery-migrate-1.1.1.js",
         "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "../node_modules/bootstrap/dist/js/tab.js",
         "../node_modules/bootstrap/dist/js/main.js"
         
       ],
