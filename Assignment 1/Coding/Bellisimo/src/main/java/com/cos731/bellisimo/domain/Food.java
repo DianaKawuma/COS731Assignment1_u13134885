@@ -19,7 +19,7 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "Food")
+@Table(name = "FoodData")
 public class Food {
 
     @Id
@@ -30,20 +30,39 @@ public class Food {
     @Column(name = "itemName", nullable = false)
     private String name;
 
+    public String getName() {
+        return name;
+    }
+
     @NotNull
     @Column(name = "price", nullable = false)
     private Long price;
+
+    public Long getPrice() {
+        return price;
+    }
 
     @NotNull
     @Column(name = "photolink", nullable = false)
     private String photolink;
 
+    public String getPhotolink() {
+        return photolink;
+    }
+
     @NotNull
     @Column(name = "category", nullable = false)
     private String category;
+
+    public String getCategory() {
+        return category;
+    }
 
     @NotNull
     @Column(name = "categoryType", nullable = false)
     private String categoryType;
 
+    public String getCategoryType() {
+        return categoryType;
+    }
 }

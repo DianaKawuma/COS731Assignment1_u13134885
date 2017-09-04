@@ -33,7 +33,7 @@ import java.util.stream.Collectors;
  */
 
 @RestController
-@RequestMapping("/food")
+@RequestMapping("/foodJava")
 public class FoodResource {
 
     @Autowired
@@ -43,7 +43,10 @@ public class FoodResource {
     FoodRepository foodRepository;
 
 
-    @RequestMapping(value = "/list", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping("/list") //method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public String greet(){
+        return "hello from the other side!!";
+    }
     @Transactional(readOnly = true)
     public ResponseEntity<List<FoodDTO>> getFoodList(Pageable pageable){
 

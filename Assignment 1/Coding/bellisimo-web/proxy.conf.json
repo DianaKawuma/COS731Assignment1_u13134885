@@ -1,0 +1,7 @@
+
+{
+"/food" :{
+"target" : "http://localhost:9005",
+"secure" : false
+}
+}
