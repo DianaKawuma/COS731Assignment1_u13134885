@@ -17,6 +17,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,22 +33,22 @@ import java.util.stream.Collectors;
  * @author Diana
  */
 
-@RestController
-@RequestMapping("/foodJava")
+@Controller
 public class FoodResource {
 
-    @Autowired
+
+    /*@Autowired
     Shop shop;
 
     @Autowired
-    FoodRepository foodRepository;
+    FoodRepository foodRepository; */
 
 
-    @RequestMapping("/list") //method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+   @RequestMapping("/food") //method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public String greet(){
-        return "hello from the other side!!";
+        return "index";
     }
-    @Transactional(readOnly = true)
+    /*@Transactional(readOnly = true)
     public ResponseEntity<List<FoodDTO>> getFoodList(Pageable pageable){
 
         Page<Food> page = foodRepository.findAll( pageable);
@@ -62,5 +63,5 @@ public class FoodResource {
 
         return new ResponseEntity<>(HttpStatus.OK);
 
-    }
+    } */
 }

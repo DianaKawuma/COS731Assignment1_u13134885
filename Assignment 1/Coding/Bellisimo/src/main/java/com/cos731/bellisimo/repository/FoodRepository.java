@@ -1,11 +1,19 @@
 package com.cos731.bellisimo.repository;
 
+
+import java.util.List;
+
 import com.cos731.bellisimo.domain.Food;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
+//import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import java.util.Optional;
+//Serves as the data access layer in Spring Data Rest
+public interface FoodRepository extends CrudRepository<Food, Integer> {
 
-public interface FoodRepository extends JpaRepository<Food, Long> {
-
-    Optional<Food> findOneById(Long id);
+    //Optional<Food> findOneById(Long id);
+    //List<Food> findByFoodArchived(@Param("archivedfalse") int foodArchivedFalse);
+    //List<Food> findByFoodStatus(@Param("status") String foodStatus);
 }

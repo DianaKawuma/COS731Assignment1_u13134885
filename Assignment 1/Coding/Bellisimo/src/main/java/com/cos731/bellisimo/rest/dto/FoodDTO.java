@@ -9,7 +9,7 @@ public class FoodDTO {
     private Long id;
 
     @NotNull
-    private String name;
+    private String itemName;
 
     @NotNull
     private Long price;
@@ -30,7 +30,7 @@ public class FoodDTO {
     }
 
     public FoodDTO(String name, Long price, String photolink, String category, String categoryType){
-        this.name = name;
+        this.itemName = name;
         this.price = price;
         this.photolink = photolink;
         this.category = category;

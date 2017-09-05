@@ -27,11 +27,11 @@ public class ShopImpl implements Shop {
     ClothesRepository clothesRepository;
 
     public AddFoodItemResponse addFoodItem(AddFoodItemRequest request){
-        Optional<Food> food = foodRepository.findOneById(request.getFoodId());
+       // Optional<Food> food = foodRepository.findOneById(request.getFoodId());
 
-        if(!food.isPresent()){
+        /*if(!food.isPresent()){
             //throw new Exception();
-        }
+        } */
 
         foodRepository.save(new Food());
         return new AddFoodItemResponse();
@@ -43,13 +43,13 @@ public class ShopImpl implements Shop {
     }
 
     public DeleteFoodItemResponse deleteFoodItem(DeleteFoodItemRequest request){
-        Optional<Food> food = foodRepository.findOneById(request.getFoodId());
+        //Optional<Food> food = foodRepository.findOneById(request.getFoodId());
 
-        if(!food.isPresent()){
+       /* if(!food.isPresent()){
             //throw new Exception();
-        }
+        } */
 
-        foodRepository.delete(request.getFoodId());
+       // foodRepository.delete(request.getFoodId());
         return new DeleteFoodItemResponse();
     }
 

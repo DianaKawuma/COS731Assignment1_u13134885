@@ -19,7 +19,7 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "FoodData")
+@Table(name = "Food")
 public class Food {
 
     @Id
@@ -28,15 +28,23 @@ public class Food {
 
     @NotNull
     @Column(name = "itemName", nullable = false)
-    private String name;
+    private String itemName;
+
+    public void setName(String itemName) {
+        this.itemName = itemName;
+    }
 
     public String getName() {
-        return name;
+        return itemName;
     }
 
     @NotNull
     @Column(name = "price", nullable = false)
     private Long price;
+
+    public void setPrice(Long price) {
+        this.price = price;
+    }
 
     public Long getPrice() {
         return price;
@@ -46,6 +54,10 @@ public class Food {
     @Column(name = "photolink", nullable = false)
     private String photolink;
 
+    public void setPhotolink(String photolink) {
+        this.photolink = photolink;
+    }
+
     public String getPhotolink() {
         return photolink;
     }
@@ -53,6 +65,10 @@ public class Food {
     @NotNull
     @Column(name = "category", nullable = false)
     private String category;
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
     public String getCategory() {
         return category;
@@ -62,7 +78,18 @@ public class Food {
     @Column(name = "categoryType", nullable = false)
     private String categoryType;
 
+    public void setCategoryType(String categoryType) {
+        this.categoryType = categoryType;
+    }
+
     public String getCategoryType() {
         return categoryType;
+    }
+
+    @Override
+    public String toString(){
+        return "Food [itemName=" + itemName + ", price=" + price +
+                ", photolink=" + photolink + ", category=" + category +
+                ", categoryType=" + categoryType + "]";
     }
 }
