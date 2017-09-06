@@ -16,12 +16,12 @@ export class FoodMenuComponent {
 //foodTest: any[];  
 
  dessert = [
-    { category: 'Desserts', categoryType: 'Scone' , itemName: "Banna Scone", photolink: "../assets/page3_img1.jpg", price: 20 },
-    { category: 'Desserts', categoryType: 'Cake' , itemName: "Black Forrest", photolink: "../assets/box_img2.jpg", price: 50 },
-    { category: 'Desserts', categoryType: 'Rolls' , itemName: "Brown hotdog", photolink: "../assets/box_img3.jpg", price: 18 },
-    { category: 'Desserts', categoryType: 'Muffins' , itemName: "BlueBerry Muffin", photolink: "../assets/box_img4.jpg", price: 15 },
-    { category: 'Desserts', categoryType: 'Croissants' , itemName: "Butter Croissants", photolink: "../assets/box_img1.jpg", price: 16},
-    { category: 'Desserts', categoryType: 'Cake' , itemName: "Red velvet", photolink: "../assets/page3_img2.jpg", price: 40 },
+    { category: 'Desserts', categoryType: 'Scone' , itemName: "Banna Scone", photolink: "../assets/Scone.jpg", price: 20 },
+    { category: 'Desserts', categoryType: 'Cake' , itemName: "Black Forrest", photolink: "../assets/BlackForestjpg.jpg", price: 50 },
+    { category: 'Desserts', categoryType: 'Muffins' , itemName: "BlueBerry Muffin", photolink: "../assets/blueberry-muffins.jpg", price: 15 },
+    { category: 'Desserts', categoryType: 'Croissants' , itemName: "Butter Croissants", photolink: "../assets/ButterCroissants.jpg", price: 16},
+    { category: 'Desserts', categoryType: 'Cake' , itemName: "Red velvet", photolink: "../assets/RedVelvet.jpg", price: 40 },
+    { category: 'Desserts', categoryType: 'Rolls' , itemName: "Buchty Sweet Cherry Filled Buns", photolink: "../assets/Buchty-Sweet-Cherry-Filled-Buns.jpg", price: 18 }
   ];
   desserts = this.dessert;
 

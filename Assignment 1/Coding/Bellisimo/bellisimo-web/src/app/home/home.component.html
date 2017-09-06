@@ -1,71 +1,72 @@
+<html lang="en">
+<head>
+   <link rel="icon" href="../assets/favicon.ico">
+  <link rel="shortcut icon" href="../assets/favicon.ico" />
+  <script>
+    $(document).ready(function(){
+      $( ".block1" ).mouseover(function() {
+        $(this).addClass( "blur" );
+      });
+      $( ".block1" ).mouseout(function() {
+        $(this).removeClass( "blur" );
+      });
+      $().UItoTop({ easingType: 'easeOutQuart' });
+    }) 
+  </script>
+</head>
+<body class="page1">
+ <header> 
+  <div class="container_12">
+   <div class="grid_12"> 
+    <div class="socials">
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#" class="last"></a>
+    </div>
+    <!--<h1><a (click)="refresh()"[routerLink]="['/home']"><img src="../assets/logo.png" alt="Boo House"></a> </h1> -->
+    <div class="menu_block">
 
-<div class="box-wrap">
-		<header role="banner" id="fh5co-header">
-			<div class="container">
-				<nav class="navbar navbar-default">
-					<div class="row">
-						<div class="col-md-15">
-							<ul class="nav text-center">
-								<li class="active"><a [routerLink]="['/home']"><span>Home</span></a></li>
-								<li><a [routerLink]="['/foodMenu']">Food</a></li>
-								<li><a href="services.html">Clothing</a></li>
-								<li><a [routerLink]="['/contact']">Contact</a></li>
-							</ul>
-						</div>
-					</div>
-				</nav>
-		  </div>
-		</header>
+    <nav id="bt-menu" class="bt-menu bt-menu-open">
+        <a href="#" class="bt-menu-trigger"></a>
+        <ul>
+          <li class="active"><a [routerLink]="['/home']"><span>Home</span></a></li>
+			<li><a [routerLink]="['/foodMenu']">Food</a></li>
+			<li><a [routerLink]="['/clothingMenu']">Clothing</a></li>
+			<li><a [routerLink]="['/contact']">Contact</a></li> 
+        </ul>
+    </nav>
     
+ <div class="clear"></div>
+</div>
+<div class="clear"></div>
+          </div>
+      </div>
+</header>
+</body>
 <section id="intro">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
-						<div class="intro animate-box">
-							<h2>{{title}}</h2>
-						</div>
-					</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
+				<div class="intro animate-box">
+					<h2>{{title}}</h2>
 				</div>
 			</div>
+		</div>
+	</div>
 </section>
+<!--==============================Content=================================-->
 
-    <section id="work">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="fh5co-grid animate-box" style="background-image: url(../assets/page3_img6.jpg);">
-							<a class="image-popup text-center" href="#">
-								<div class="work-title">
-									<h3>Don’t Just Stand There</h3>
-									<span>Illustration, Print</span>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="fh5co-grid animate-box; image-responsive" style="background-image: url(../assets/2.jpg);">
-							<a class="image-popup text-center" href="#">
-								<div class="work-title">
-									<h3>Don’t Just Stand There</h3>
-									<span>Illustration, Print</span>
-								</div>
-							</a>
-						</div>
-					</div>
-	
-					<div class="col-md-12">
-						<div class="fh5co-grid animate-box" style="background-image: url(../assets/box_img1.jpg);">
-							<a class="image-popup text-center" href="#">
-								<div class="work-title">
-									<h3>Ampersand</h3>
-									<span>Illustration, Print</span>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - December 02, 2013!</div>
+<a   class="block1 ">
+  <img src="../assets/pix-slider.jpg" alt="">
+  
+</a>
+<a  class="block1">
+  <img src="../assets/jumper1.gif" alt="">
+
+</a>
 </div>
 
 
+</html>

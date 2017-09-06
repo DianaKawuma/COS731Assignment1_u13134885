@@ -13,6 +13,8 @@ import { MeatFishPoultryComponent } from './meat-fish-poultry/meat-fish-poultry.
 import { DiaryEggsMilkComponent } from './diary-eggs-milk/diary-eggs-milk.component';
 import { FruitsVegetablesComponent } from './fruits-vegetables/fruits-vegetables.component';
 import { DrinksComponent } from './drinks/drinks.component';
+import { MenComponent } from './men/men.component';
+import { KidsComponent } from './kids/kids.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { DrinksComponent } from './drinks/drinks.component';
     MeatFishPoultryComponent,
     DiaryEggsMilkComponent,
     FruitsVegetablesComponent,
-    DrinksComponent
+    DrinksComponent,
+    MenComponent,
+    KidsComponent
   ],
   imports: [
     BrowserModule,

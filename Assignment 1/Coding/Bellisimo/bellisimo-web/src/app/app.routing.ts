@@ -7,18 +7,22 @@ import { MeatFishPoultryComponent } from './meat-fish-poultry/meat-fish-poultry.
 import { DiaryEggsMilkComponent } from './diary-eggs-milk/diary-eggs-milk.component';
 import { FruitsVegetablesComponent } from './fruits-vegetables/fruits-vegetables.component';
 import { DrinksComponent } from './drinks/drinks.component';
+import { MenComponent } from './men/men.component';
+import { KidsComponent } from './kids/kids.component';
 
 export const AppRoutes: any = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     { path: "contact", component: ContactComponent },
     { path: "CatalogueFood", component: FoodComponent },
-    { path: "clothing", component: ClothingComponent },
+    { path: "clothingMenu", component: ClothingComponent },
     { path: "home", component: HomeComponent },
     { path: "foodMenu", component: FoodMenuComponent },
     { path: "MeatFishPoultry", component: MeatFishPoultryComponent },
     { path: "DiaryEggsMilk", component: DiaryEggsMilkComponent },
     { path: "FruitsVegetables", component: FruitsVegetablesComponent },
     { path: "Drinks", component: DrinksComponent },
+    { path: "Men", component: MenComponent },
+    { path: "Kids", component: KidsComponent },
 ];
  
 export const AppComponents: any = [
@@ -30,6 +34,8 @@ export const AppComponents: any = [
     MeatFishPoultryComponent,
     DiaryEggsMilkComponent,
     FruitsVegetablesComponent,
-    DrinksComponent
+    DrinksComponent,
+    MenComponent,
+    KidsComponent
 
 ];
