@@ -58,22 +58,21 @@
              <div class="div-nav  ">
              <div class="grid_12">
                <ul id="tabs" class="nav nav-tabs" >
-                    <li class="active"><a data-toggle="tab" [routerLink]="['/foodMenu']">Desserts</a></li>
+                    <li ><a data-toggle="tab" [routerLink]="['/foodMenu']">Desserts</a></li>
                     <li><a data-toggle="tab" [routerLink]="['/MeatFishPoultry']">Meat, Fish & Poultry</a></li>
                     <li><a data-toggle="tab" [routerLink]="['/DiaryEggsMilk']">Diary, Eggs, & Milk</a></li>
                     <li><a data-toggle="tab" [routerLink]="['/FruitsVegetables']">Fruits & Vegetables</a></li>
-                    <li><a data-toggle="tab" [routerLink]="['/Drinks']">Drinks</a></li>
+                    <li class="active"><a data-toggle="tab" [routerLink]="['/Drinks']">Drinks</a></li>
                    <!-- <li><a data-toggle="tab" href="#menu5">Specials</a></li> -->
                 </ul>
              </div>    
              </div>
              <div class="tab-content div-tabs">
-              <div  id="menu0" class="tab-pane fade in active">
-                  <div class="desserts grid_3" *ngFor="let dessert of desserts">
+  
+              <div class="desserts grid_3" *ngFor="let dessert of desserts">
                     <a  class="gal"><img src={{dessert.photolink}} alt=""><span></span></a>
                     <div class="col2"><span class="col3"><a >{{dessert.itemName }}</a></span> R {{dessert.price}}</div>
                   </div>
-              </div>
 
              </div>
         </div>

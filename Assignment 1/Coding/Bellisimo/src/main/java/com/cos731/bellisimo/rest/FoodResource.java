@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -33,21 +34,35 @@ import java.util.stream.Collectors;
  * @author Diana
  */
 
-@Controller
+@RestController
+//@RequestMapping("/api")
 public class FoodResource {
 
-
-    /*@Autowired
+    @Autowired
     Shop shop;
 
     @Autowired
-    FoodRepository foodRepository; */
+    FoodRepository foodRepository;
 
-
-   @RequestMapping("/food") //method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    /**
+     * @param //pageable
+     * @return
+     */
+   @RequestMapping("/food")//, method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public String greet(){
+       return "helloe from the other side";
+   }
+   /*@Transactional(readOnly = true)
+   public ResponseEntity<List<FoodDTO>> getAllFood(Pageable pageable) throws URISyntaxException {
+
+       Page<Food> page = foodRepository.findAll(pageable);
+       List<FoodDTO> managedFoodDTOs = page.getContent().stream().map(FoodDTO::new).collect(Collectors.toList());
+       return new ResponseEntity<>(managedFoodDTOs, HttpStatus.OK);
+   } */
+
+  /*  public String greet(){
         return "index";
-    }
+    } */
     /*@Transactional(readOnly = true)
     public ResponseEntity<List<FoodDTO>> getFoodList(Pageable pageable){
 

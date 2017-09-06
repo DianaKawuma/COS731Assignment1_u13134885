@@ -1,7 +1,9 @@
 
-{
-"/food" :{
-"target" : "http://localhost:9005",
-"secure" : false
-}
+{"/food/" :{
+    "target" : "http://localhost:9005/",
+    "secure" : false,
+    "pathRewrite":{ "^/food": "http://localhost:9005" },
+    "changeOrigin": true,
+    "logLevel": "debug"
+    }
 }
