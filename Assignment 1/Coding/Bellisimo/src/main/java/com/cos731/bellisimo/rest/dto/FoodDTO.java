@@ -29,8 +29,8 @@ public class FoodDTO {
         );
     }
 
-    public FoodDTO(String name, Long price, String photolink, String category, String categoryType){
-        this.itemName = name;
+    public FoodDTO(String itemName, Long price, String photolink, String category, String categoryType){
+        this.itemName = itemName;
         this.price = price;
         this.photolink = photolink;
         this.category = category;

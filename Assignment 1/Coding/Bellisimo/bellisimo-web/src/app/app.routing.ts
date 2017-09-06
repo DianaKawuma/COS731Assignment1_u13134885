@@ -9,6 +9,7 @@ import { FruitsVegetablesComponent } from './fruits-vegetables/fruits-vegetables
 import { DrinksComponent } from './drinks/drinks.component';
 import { MenComponent } from './men/men.component';
 import { KidsComponent } from './kids/kids.component';
+import { AdminComponent } from './admin/admin.component';
 
 export const AppRoutes: any = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -23,6 +24,7 @@ export const AppRoutes: any = [
     { path: "Drinks", component: DrinksComponent },
     { path: "Men", component: MenComponent },
     { path: "Kids", component: KidsComponent },
+    { path: "admin", component: AdminComponent }
 ];
  
 export const AppComponents: any = [
@@ -36,6 +38,7 @@ export const AppComponents: any = [
     FruitsVegetablesComponent,
     DrinksComponent,
     MenComponent,
-    KidsComponent
+    KidsComponent,
+    AdminComponent
 
 ];

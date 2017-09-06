@@ -1,0 +1,19 @@
+<form action="/action_page.php">
+    <div class="imgcontainer">
+        <h1>Please Login</h1>
+      </div>
+
+  <div class="container">
+    <label><b>Username</b></label>
+    <input type="text" placeholder={{userNameholder}} name="uname" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder={{passwordholder}} name="psw" required>
+
+    <button type="submit">Login</button>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button [routerLink]="['/home']" type="button" class="cancelbtn">Cancel</button>
+  </div>
+</form>

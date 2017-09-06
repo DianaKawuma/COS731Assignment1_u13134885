@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
 import { AppComponents, AppRoutes } from "./app.routing";
+//import { FormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
@@ -15,6 +16,7 @@ import { FruitsVegetablesComponent } from './fruits-vegetables/fruits-vegetables
 import { DrinksComponent } from './drinks/drinks.component';
 import { MenComponent } from './men/men.component';
 import { KidsComponent } from './kids/kids.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { KidsComponent } from './kids/kids.component';
     FruitsVegetablesComponent,
     DrinksComponent,
     MenComponent,
-    KidsComponent
+    KidsComponent,
+    AdminComponent,
+    //FormsModule
   ],
   imports: [
     BrowserModule,

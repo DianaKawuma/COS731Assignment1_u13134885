@@ -86,10 +86,10 @@ public class Food {
         return categoryType;
     }
 
-    @Override
+   /* @Override
     public String toString(){
         return "Food [itemName=" + itemName + ", price=" + price +
                 ", photolink=" + photolink + ", category=" + category +
                 ", categoryType=" + categoryType + "]";
-    }
+    } */
 }
