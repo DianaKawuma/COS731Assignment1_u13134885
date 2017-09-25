@@ -15,7 +15,7 @@ import java.util.Optional;
 //Serves as the data access layer in Spring Data Rest
 public interface FoodRepository extends CrudRepository<Food, Integer> {
 
-    Optional<Food> findOneById(Long id);
+    //Optional<Food> findOneById(Long id);
 
     Page<Food> findAll(Pageable pageable);
     //List<Food> findByFoodArchived(@Param("archivedfalse") int foodArchivedFalse);
