@@ -1,106 +1,71 @@
+<h1>Angular 4 CRUD Example</h1>
+<h3 *ngIf="foodIdToUpdate; else create">
+  Update Food for Id: {{foodIdToUpdate}}
+</h3>
+<ng-template #create>
+  <h3> Create New Food </h3>
+</ng-template>
+<div>
+  <form [formGroup]="foodForm" (ngSubmit)="onFoodFormSubmit()">
+    <table>
 
-     <head>
-     <title>{{title}}</title>
-     <link rel="icon" href="images/favicon.ico">
-     <link rel="shortcut icon" href="images/favicon.ico" />
-    <script>
-        $(document).ready(function(){
+      <tr><td>Enter itemName</td><td><input formControlName="itemName">
+        <label *ngIf="foodForm.get('itemName').invalid && processValidation" [ngClass] = "'error'"> itemName is required. </label>
+      </td></tr>
 
-          $().UItoTop({ easingType: 'easeOutQuart' });
-         $('.gallery a.gal').touchTouch();
-         
-       }) 
-     </script>
-    
-     </head>
-     <body  class="">
+      <tr><td>Enter price</td><td><input formControlName="price">
+        <label *ngIf="foodForm.get('price').invalid && processValidation" [ngClass] = "'error'"> price is required. </label>
+      </td></tr>
 
-<!--==============================header=================================-->
- <header> 
-  <div class="container_12">
-   <div class="grid_12"> 
-    <div class="socials">
-      <a href="#"></a>
-      <a href="#"></a>
-      <a href="#"> </a>
-      <a href="#" class="last"></a>
+      <tr><td>Enter photolink</td><td><input formControlName="photolink">
+        <label *ngIf="foodForm.get('photolink').invalid && processValidation" [ngClass] = "'error'"> photolink is required. </label>
+      </td></tr>
+
+      <tr><td>Enter Category</td><td><input formControlName="category">
+        <label *ngIf="foodForm.get('category').invalid && processValidation" [ngClass] = "'error'"> category is required. </label>
+      </td></tr>
+
+      <tr><td>Enter categoryType</td><td><input formControlName="categoryType">
+        <label *ngIf="foodForm.get('categoryType').invalid && processValidation" [ngClass] = "'error'"> categoryType is required. </label>
+      </td></tr>
+
+      <tr><td colspan="2">
+        <button *ngIf="!foodIdToUpdate">CREATE</button>
+        <button *ngIf="foodIdToUpdate">UPDATE</button>
+        <button (click)="backToCreateFood()" *ngIf="foodIdToUpdate">Go Back</button>
+      </td></tr>
+    </table>
+  </form>
+  <br/>
+  <div *ngIf="statusCode; else processing">
+    <div *ngIf="statusCode === 201" [ngClass] = "'success'">
+      Food added successfully.
     </div>
-    <!--<h1><a (click)="refresh()"[routerLink]="['/foodCatalogue']"><img src="../assets/logo.png" alt="Boo House"></a> </h1> -->
-    <div class="menu_block">
-
-    <nav  id="bt-menu" class="bt-menu bt-menu-open">
-        <a href="#" class="bt-menu-trigger"></a>
-        <ul>
-          <li class="bt-icon "><a (click)="refresh()"[routerLink]="['/home']">Home</a></li>
-         <!--<li class="bt-icon"><a href="index-1.html">About</a></li> -->
-         <li class="current bt-icon"><a (click)="refresh()"[routerLink]="['/foodMenu']">Catalogue</a></li>
-        <li class="bt-icon"><a (click)="refresh()"[routerLink]="['/contact']">Contacts</a></li>
-        </ul>
-      </nav>
-    
- <div class="clear"></div>
-</div>
-<div class="clear"></div>
-          </div>
-      </div>
-      
-</header>
-
-	<div class="row">
-        <div class="search">
-<input type="text" class="form-control input-sm" maxlength="64" placeholder="Search" />
- <button type="submit" class="btn btn-primary btn-sm">Search</button>
-</div>
-	</div>
-
-
-<!--==============================Content=================================-->
-
-<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - December 02, 2013!</div>
-
-  <div class="container_12">
-    <div class="grid_12">
-      <h3 class="head2">Our Food catalogues</h3>
-    </div>  
-    
-    
-    <div class="tabs tb gallery ">
-             <div class="div-nav  ">
-             <div class="grid_12">
-               <ul id="tabs" class="nav nav-tabs" >
-                    <li class="active"><a data-toggle="tab" [routerLink]="['/foodMenu']">Desserts</a></li>
-                    <li><a data-toggle="tab" [routerLink]="['/MeatFishPoultry']">Meat, Fish & Poultry</a></li>
-                    <li><a data-toggle="tab" [routerLink]="['/DiaryEggsMilk']">Diary, Eggs, & Milk</a></li>
-                    <li><a data-toggle="tab" [routerLink]="['/FruitsVegetables']">Fruits & Vegetables</a></li>
-                    <li><a data-toggle="tab" [routerLink]="['/Drinks']">Drinks</a></li>
-                   <!-- <li><a data-toggle="tab" href="#menu5">Specials</a></li> -->
-                </ul>
-             </div>    
-             </div>
-             <div class="tab-content div-tabs">
-              <div  id="menu0" class="tab-pane fade in active">
-                  <div class="desserts grid_3" *ngFor="let dessert of desserts">
-                    <a  class="gal"><img src={{dessert.photolink}} alt=""><span></span></a>
-                    <div class="col2"><span class="col3"><a >{{dessert.itemName }}</a></span> R {{dessert.price}}</div>
-                  </div>
-              </div>
-
-             </div>
-        </div>
+    <div *ngIf="statusCode === 409" [ngClass] = "'success'">
+      Food already exists.
+    </div>
+    <div *ngIf="statusCode === 200" [ngClass] = "'success'">
+      Food updated successfully.
+    </div>
+    <div *ngIf="statusCode === 204" [ngClass] = "'success'">
+      Food deleted successfully.
+    </div>
+    <div *ngIf="statusCode === 500" [ngClass] = "'error'">
+      Internal Server Error.
+    </div>
   </div>
+  <ng-template #processing>
+    <img *ngIf="requestProcessing" src="assets/images/loading.gif">
+  </ng-template>
 </div>
 
-       <script>
-      $(document).ready(function(){ 
-         $(".bt-menu-trigger").toggle( 
-          function(){
-            $('.bt-menu').addClass('bt-menu-open'); 
-          }, 
-          function(){
-            $('.bt-menu').removeClass('bt-menu-open'); 
-          } 
-        ); 
-      }) 
-    </script>
-</body>
+<h3>Food Details</h3>
+<table>
+  <tr><th> Id</th> <th>ItemName</th> <th>Photolink</th> <th>Price</th>  </tr>
+  <tr *ngFor="let food of allFoods" >
+    <td>{{food.id}}</td> <td>{{food.itemName}}</td> <td><img src={{food.photolink}}></td> <td>{{food.price}}</td>
+    <td><button type="button" (click)="loadFoodToEdit(food.id)">Edit</button> </td>
+    <td><button type="button" (click)="deleteFood(food.id)">Delete</button></td>
+  </tr>
+</table>
 

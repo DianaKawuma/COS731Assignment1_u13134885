@@ -14,8 +14,16 @@ public class Clothing {
     @GeneratedValue (strategy = GenerationType.AUTO)
     private Long id;
 
-    @NotNull
-    @Column(name = "itemName", nullable = false)
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    //@NotNull
+    @Column(name = "itemName")
     private String itemName;
 
     public void setName(String itemName) {
@@ -26,8 +34,8 @@ public class Clothing {
         return itemName;
     }
 
-    @NotNull
-    @Column(name = "price", nullable = false)
+    //@NotNull
+    @Column(name = "price")
     private Long price;
 
     public void setPrice(Long price) {
@@ -38,8 +46,8 @@ public class Clothing {
         return price;
     }
 
-    @NotNull
-    @Column(name = "photolink", nullable = false)
+    //@NotNull
+    @Column(name = "photolink")
     private String photolink;
 
     public void setPhotolink(String photolink) {
@@ -50,8 +58,8 @@ public class Clothing {
         return photolink;
     }
 
-    @NotNull
-    @Column(name = "category", nullable = false)
+    // @NotNull
+    @Column(name = "category")
     private String category;
 
     public void setCategory(String category) {
@@ -62,8 +70,8 @@ public class Clothing {
         return category;
     }
 
-    @NotNull
-    @Column(name = "categoryType", nullable = false)
+    // @NotNull
+    @Column(name = "categoryType")
     private String categoryType;
 
     public void setCategoryType(String categoryType) {
@@ -73,23 +81,10 @@ public class Clothing {
     public String getCategoryType() {
         return categoryType;
     }
-
-    @NotNull
-    @Column(name="categoryFilter", nullable = false)
-    private String categoryFilter;
-
-    public String getCategoryFilter() {
-        return categoryFilter;
-    }
-
-    public void setCategoryFilter(String categoryFilter) {
-        this.categoryFilter = categoryFilter;
-    }
     /* @Override
     public String toString(){
         return "Food [itemName=" + itemName + ", price=" + price +
                 ", photolink=" + photolink + ", category=" + category +
                 ", categoryType=" + categoryType + "]";
     } */
-
 }

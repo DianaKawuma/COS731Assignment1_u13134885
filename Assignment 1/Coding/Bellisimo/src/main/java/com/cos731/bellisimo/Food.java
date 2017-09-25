@@ -83,17 +83,6 @@ public class Food {
         return categoryType;
     }
 
-    //@NotNull
-    @Column(name="categoryFilter")
-    private String categoryFilter;
-
-    public String getCategoryFilter() {
-        return categoryFilter;
-    }
-
-    public void setCategoryFilter(String categoryFilter) {
-        this.categoryFilter = categoryFilter;
-    }
     /* @Override
     public String toString(){
         return "Food [itemName=" + itemName + ", price=" + price +

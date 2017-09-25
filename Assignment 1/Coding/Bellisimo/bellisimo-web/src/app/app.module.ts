@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
 import { AppComponents, AppRoutes } from "./app.routing";
-//import { FormsModule }   from '@angular/forms';
-
+import { FormsModule }   from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { FoodComponent } from './food/food.component';
@@ -17,6 +17,9 @@ import { DrinksComponent } from './drinks/drinks.component';
 import { MenComponent } from './men/men.component';
 import { KidsComponent } from './kids/kids.component';
 import { AdminComponent } from './admin/admin.component';
+import { HttpModule } from '@angular/http';
+
+import {ProductService} from './product-service/product.service';
 
 @NgModule({
   declarations: [
@@ -32,15 +35,18 @@ import { AdminComponent } from './admin/admin.component';
     DrinksComponent,
     MenComponent,
     KidsComponent,
-    AdminComponent,
-    //FormsModule
+    AdminComponent
+
   ],
   imports: [
     BrowserModule,
     RouterModule,
-    RouterModule.forRoot(AppRoutes)
+    RouterModule.forRoot(AppRoutes),
+    HttpModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
