@@ -15,7 +15,7 @@ export class FoodMenuComponent implements OnInit {
 //===============================================================================
                             //Food Section
 //===============================================================================
-
+  title = 'FoodMenu';
 //Component properties
   allFoods: Food[];
   statusCode: number;
