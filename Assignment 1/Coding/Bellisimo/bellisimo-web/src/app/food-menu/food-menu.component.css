@@ -491,6 +491,35 @@ a.col1:hover, .col1>a:hover {
 	font-size: 15px; 
 	font-family: 'sans-serif';
 }
+/*own classes and id's added */
+.col4{
+	font-size: 20px;
+	font-family: 'Arial Narrow';
+}
+.col5{
+	font-size: 18px;
+	font-family: 'Arial Narrow';
+	color: #d9c381;
+}
+
+.dessertTextBoxes{
+	margin-left: 35%;
+}
+
+#foodupdateText{
+	margin-left: 40%;
+	font-family: 'serif';
+	font-size: 15px;
+}
+.Succ{
+	font-size: 20px;
+	color: seagreen;
+}
+.unSucc{
+	font-size: 15px;
+	color: red;
+}
+/*############################### */
 
 .tab-content:after {
 	clear: both;

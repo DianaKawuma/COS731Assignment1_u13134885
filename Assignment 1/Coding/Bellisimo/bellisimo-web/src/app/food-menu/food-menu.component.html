@@ -33,62 +33,7 @@
         <div class="clear"></div>
       </div>
       <div class="clear"></div>
-      <h3 *ngIf="foodIdToUpdate; else create">
-        Update Food for Id: {{foodIdToUpdate}}
-      </h3>
-      <div>
-        <form [formGroup]="foodForm" (ngSubmit)="onFoodFormSubmit()">
-          <table>
 
-            <tr><td>Enter itemName</td><td><input formControlName="itemName">
-              <label *ngIf="foodForm.get('itemName').invalid && processValidation" [ngClass] = "'error'"> itemName is required. </label>
-            </td></tr>
-
-            <tr><td>Enter price</td><td><input formControlName="price">
-              <label *ngIf="foodForm.get('price').invalid && processValidation" [ngClass] = "'error'"> price is required. </label>
-            </td></tr>
-
-            <tr><td>Enter photolink</td><td><input formControlName="photolink">
-              <label *ngIf="foodForm.get('photolink').invalid && processValidation" [ngClass] = "'error'"> photolink is required. </label>
-            </td></tr>
-
-            <tr><td>Enter Category</td><td><input formControlName="category">
-              <label *ngIf="foodForm.get('category').invalid && processValidation" [ngClass] = "'error'"> category is required. </label>
-            </td></tr>
-
-            <tr><td>Enter categoryType</td><td><input formControlName="categoryType">
-              <label *ngIf="foodForm.get('categoryType').invalid && processValidation" [ngClass] = "'error'"> categoryType is required. </label>
-            </td></tr>
-
-            <tr><td colspan="2">
-              <button *ngIf="!foodIdToUpdate">CREATE</button>
-              <button *ngIf="foodIdToUpdate">UPDATE</button>
-              <button (click)="backToCreateFood()" *ngIf="foodIdToUpdate">Go Back</button>
-            </td></tr>
-          </table>
-        </form>
-        <br/>
-        <div *ngIf="statusCode; else processing">
-          <div *ngIf="statusCode === 201" [ngClass] = "'success'">
-            Food added successfully.
-          </div>
-          <div *ngIf="statusCode === 409" [ngClass] = "'success'">
-            Food already exists.
-          </div>
-          <div *ngIf="statusCode === 200" [ngClass] = "'success'">
-            Food updated successfully.
-          </div>
-          <div *ngIf="statusCode === 204" [ngClass] = "'success'">
-            Food deleted successfully.
-          </div>
-          <div *ngIf="statusCode === 500" [ngClass] = "'error'">
-            Internal Server Error.
-          </div>
-        </div>
-        <ng-template #processing>
-          <img *ngIf="requestProcessing" src="assets/images/loading.gif">
-        </ng-template>
-      </div>
 
     </div>
   </div>
@@ -105,14 +50,74 @@
 
 <!--==============================Content=================================-->
 
-<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - December 02, 2013!</div>
+<div class="content">
 
   <div class="container_12">
     <div class="grid_12">
       <h3 class="head2">Our Food catalogues</h3>
     </div>
+    <h4 id="foodupdateText" *ngIf="foodIdToUpdate; else create">
+      Update Food for Id: {{foodIdToUpdate}}
+    </h4>
+    <br>
+    <!--Create delete and update section -->
+    <div class="dessertTextBoxes">
 
+      <form [formGroup]="foodForm" (ngSubmit)="onFoodFormSubmit()">
+        <table>
 
+          <tr><td class="col4">itemName</td><td>&nbsp;&nbsp;&nbsp;&nbsp;<input placeholder="enter itemName" class="col5" formControlName="itemName">
+            <label class="unSucc" *ngIf="foodForm.get('itemName').invalid && processValidation" [ngClass] = "'error'"> itemName is required. </label>
+          </td></tr>
+
+          <tr><td class="col4">price</td><td>&nbsp;&nbsp;&nbsp;&nbsp;<input placeholder="enter price" class="col5" formControlName="price">
+            <label class="unSucc" *ngIf="foodForm.get('price').invalid && processValidation" [ngClass] = "'error'"> price is required. </label>
+          </td></tr>
+
+          <tr><td class="col4">photolink</td><td>&nbsp;&nbsp;&nbsp;&nbsp;<input placeholder="enter photolink" class="col5" formControlName="photolink">
+            <label class="unSucc" *ngIf="foodForm.get('photolink').invalid && processValidation" [ngClass] = "'error'"> photolink is required. </label>
+          </td></tr>
+
+          <tr><td class="col4">category</td><td>&nbsp;&nbsp;&nbsp;&nbsp;<input placeholder="enter Category" class="col5" formControlName="category">
+            <label class="unSucc" *ngIf="foodForm.get('category').invalid && processValidation" [ngClass] = "'error'"> category is required. </label>
+          </td></tr>
+
+          <tr><td class="col4">categoryType</td><td>&nbsp;&nbsp;&nbsp;&nbsp;<input placeholder="enter categoryType" class="col5" formControlName="categoryType">
+            <label class="unSucc" *ngIf="foodForm.get('categoryType').invalid && processValidation" [ngClass] = "'error'"> categoryType is required. </label>
+          </td></tr>
+
+          <tr><td colspan="2">
+            <button class="col3" *ngIf="!foodIdToUpdate">CREATE</button>
+            <button class="col3" *ngIf="foodIdToUpdate">UPDATE</button>
+            <button class="col3" (click)="backToCreateFood()" *ngIf="foodIdToUpdate">Go Back</button>
+          </td></tr>
+        </table>
+      </form>
+      <br/>
+      <div *ngIf="statusCode; else processing">
+        <div class="Succ" *ngIf="statusCode === 201" [ngClass] = "'success'">
+          Food added successfully.
+        </div>
+        <div class="unSucc" *ngIf="statusCode === 409" [ngClass] = "'success'">
+          Food already exists.
+        </div>
+        <div class="Succ" *ngIf="statusCode === 200" [ngClass] = "'success'">
+          Food updated successfully.
+        </div>
+        <div class="Succ" *ngIf="statusCode === 204" [ngClass] = "'success'">
+          Food deleted successfully.
+        </div>
+        <div class="unSucc"*ngIf="statusCode === 500" [ngClass] = "'error'">
+          Internal Server Error.
+        </div>
+      </div>
+
+      <ng-template #processing>
+        <img *ngIf="requestProcessing" src="../assets/preloader.gif">
+      </ng-template>
+    </div>
+
+    <!--Dessert menu section -->
     <div class="tabs tb gallery ">
       <div class="div-nav  ">
         <div class="grid_12">
@@ -127,8 +132,8 @@
         </div>
       </div>
       <div class="tab-content div-tabs">
-        <div  id="menu0" class="tab-pane fade in active">
-          <div class="desserts grid_4" *ngFor="let food of allFoods">
+        <div  id="menu0" class="tab-pane fade in active" *ngFor="let food of allFoods">
+          <div class="desserts grid_4" *ngIf="food.category === 'Desserts'">
             <a  class="gal"><img src={{food.photolink}} alt=""><span></span></a>
             <div class="col2"><span class="col3"><a >{{food.itemName}}</a></span> R {{food.price}}</div>
             <br>

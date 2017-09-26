@@ -25,7 +25,7 @@ export class ProductService {
   createFood(food: Food):Observable<number> {
     let cpHeaders = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: cpHeaders });
-    return this.http.post(this.foodUrl, food, options)
+    return this.http.post(this.foodUrl+"/", food, options)
       .map(success => success.status)
       .catch(this.handleError);
   }
