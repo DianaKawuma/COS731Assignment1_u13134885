@@ -11,7 +11,7 @@
 
 input {
 	outline:  none !important;
-	border-radius: 0 !important;	 
+	border-radius: 0 !important;
 }
 
 
@@ -116,7 +116,7 @@ ul.list {
 
 ul.list li {
 	padding-left: 33px;
-	background: url(C:/Users/Diana/Documents/GitHub/COS731Assignment1_u13134885/Assignment 1/Coding/bellisimo-web/src/assets/marker.png) 0 6px no-repeat;
+  background: url(C:/Users/Diana/Documents/GitHub/COS731Assignment1_u13134885/Assignment 1/Coding/bellisimo-web/src/assets/marker.png) 0 6px no-repeat;
 
 }
 ul.list li+li {
@@ -136,7 +136,7 @@ a {
 
 a:hover {
 	color: #d9c381;
-	
+
 }
 
 /*preclass*/
@@ -178,7 +178,7 @@ a:hover {
 .fleft {
 	float: left;
 	margin-right: 20px;
-	margin-top: 5px;	
+	margin-top: 5px;
 	margin-bottom: 0px;
 }
 
@@ -243,7 +243,7 @@ h1 a {
 }
 
 h1 a img {
-	display: block;	
+	display: block;
 }
 
 .socials {
@@ -368,7 +368,7 @@ top: 2px;
 	left: 0;
 	top: 0;
 	width: 100%;
-	border-radius: 500px;	
+	border-radius: 500px;
 	opacity: 0;
 	right: 0;
 	height: 100%;
@@ -398,11 +398,11 @@ top: 2px;
 }
 
 .block1:hover img {
-	-webkit-filter: blur(3px); 
-	-moz-filter: blur(3px); 
-	-o-filter: blur(3px); 
-	-ms-filter: blur(3px); 
-	filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3'); 
+	-webkit-filter: blur(3px);
+	-moz-filter: blur(3px);
+	-o-filter: blur(3px);
+	-ms-filter: blur(3px);
+	filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
 	filter: blur(3px)
 }
 
@@ -482,10 +482,43 @@ a.col1:hover, .col1>a:hover {
 
 .col2 {
 	color: #d9c381;
+	font-size: 17px; 
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .col3{
 	color: #5f5e4e;
+	font-size: 15px; 
+	font-family: 'sans-serif';
+}
+
+.col4{
+	font-size: 20px;
+	font-family: 'Arial Narrow';
+}
+.col5{
+	font-size: 18px;
+	font-family: 'Arial Narrow';
+	color: #d9c381;
+}
+
+.dessertTextBoxes{
+	margin-left: 35%;
+}
+
+#foodupdateText{
+	margin-left: 40%;
+	font-family: 'serif';
+	font-size: 15px;
+}
+
+.Succ{
+	font-size: 20px;
+	color: seagreen;
+}
+.unSucc{
+	font-size: 15px;
+	color: red;
 }
 
 .tab-content:after {
@@ -503,7 +536,7 @@ a.col1:hover, .col1>a:hover {
 }
 .div-tabs a.gal  {
 	margin-top: 52px;
-	
+
 	margin-bottom: 23px;
 }
 
@@ -652,8 +685,8 @@ font-size: 18px;}
 a.gal {
 	display: block;
 	position: relative;
-	
-	
+
+
 }
 
 a.gal span {
@@ -666,7 +699,7 @@ a.gal span {
 	right: 0;
 	top: 0;
 	bottom: 0;
-	background: url(C:/Users/Diana/Documents/GitHub/COS731Assignment1_u13134885/Assignment 1/Coding/bellisimo-web/src/assets/magnify.png) -100% center no-repeat;
+	/*background: url(C:/Users/Diana/Documents/GitHub/COS731Assignment1_u13134885/Assignment 1/Coding/bellisimo-web/src/assets/magnify.png) -100% center no-repeat; */
 }
 
 a.gal:hover span {

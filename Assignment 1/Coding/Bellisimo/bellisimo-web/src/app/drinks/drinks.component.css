@@ -482,11 +482,44 @@ a.col1:hover, .col1>a:hover {
 
 .col2 {
 	color: #d9c381;
+	font-size: 17px; 
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .col3{
 	color: #5f5e4e;
+	font-size: 15px; 
+	font-family: 'sans-serif';
 }
+/*own classes and id's added */
+.col4{
+	font-size: 20px;
+	font-family: 'Arial Narrow';
+}
+.col5{
+	font-size: 18px;
+	font-family: 'Arial Narrow';
+	color: #d9c381;
+}
+
+.dessertTextBoxes{
+	margin-left: 35%;
+}
+
+#foodupdateText{
+	margin-left: 40%;
+	font-family: 'serif';
+	font-size: 15px;
+}
+.Succ{
+	font-size: 20px;
+	color: seagreen;
+}
+.unSucc{
+	font-size: 15px;
+	color: red;
+}
+/*############################### */
 
 .tab-content:after {
 	clear: both;
@@ -666,7 +699,7 @@ a.gal span {
 	right: 0;
 	top: 0;
 	bottom: 0;
-	background: url(C:/Users/Diana/Documents/GitHub/COS731Assignment1_u13134885/Assignment 1/Coding/bellisimo-web/src/assets/magnify.png) -100% center no-repeat;
+	/*background: url(C:/Users/Diana/Documents/GitHub/COS731Assignment1_u13134885/Assignment 1/Coding/bellisimo-web/src/assets/magnify.png) -100% center no-repeat; */
 }
 
 a.gal:hover span {
@@ -776,6 +809,7 @@ footer a:hover {
     background-position: right 0;
     outline: medium none;
 }
+
 #search {
     float: right;
     margin-top: 9px;
