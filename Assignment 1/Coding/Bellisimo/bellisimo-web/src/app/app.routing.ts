@@ -10,6 +10,8 @@ import { DrinksComponent } from './drinks/drinks.component';
 import { MenComponent } from './men/men.component';
 import { KidsComponent } from './kids/kids.component';
 import { AdminComponent } from './admin/admin.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 export const AppRoutes: any = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -24,9 +26,11 @@ export const AppRoutes: any = [
     { path: "Drinks", component: DrinksComponent },
     { path: "Men", component: MenComponent },
     { path: "Kids", component: KidsComponent },
-    { path: "admin", component: AdminComponent }
+    { path: "admin", component: AdminComponent },
+    { path: "register", component: RegisterComponent },
+    { path: "login", component: LoginComponent }
 ];
- 
+
 export const AppComponents: any = [
     ContactComponent,
     FoodComponent,
@@ -39,6 +43,8 @@ export const AppComponents: any = [
     DrinksComponent,
     MenComponent,
     KidsComponent,
-    AdminComponent
+    AdminComponent,
+    RegisterComponent,
+    LoginComponent
 
 ];

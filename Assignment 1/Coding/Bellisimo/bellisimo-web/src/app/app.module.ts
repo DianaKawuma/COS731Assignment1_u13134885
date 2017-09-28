@@ -20,6 +20,9 @@ import { AdminComponent } from './admin/admin.component';
 import { HttpModule } from '@angular/http';
 
 import {ProductService} from './product-service/product.service';
+import {UserService} from './user-service/user.service';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,9 @@ import {ProductService} from './product-service/product.service';
     DrinksComponent,
     MenComponent,
     KidsComponent,
-    AdminComponent
+    AdminComponent,
+    RegisterComponent,
+    LoginComponent
 
   ],
   imports: [
@@ -46,7 +51,7 @@ import {ProductService} from './product-service/product.service';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [ ProductService],
+  providers: [ ProductService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
