@@ -13,6 +13,7 @@ import {Router} from "@angular/router";
 export class RegisterComponent {
     model: any = {};
     loading = false;
+    statusCode: number;
     //private userService: UserService;
     private router: Router;
     private alertService: AlertService;
@@ -34,12 +35,12 @@ export class RegisterComponent {
         this.loading = true;
         this.userService.createUser(this.model)
           .subscribe(
-            data => {
-              this.alertService.success('Registration successful', true);
+            successCode => {
+              this.statusCode = successCode;
               this.router.navigate(['/login']);
             },
             error => {
-              this.alertService.error(error);
+              this.statusCode = error;
               this.loading = false;
             });
       }
