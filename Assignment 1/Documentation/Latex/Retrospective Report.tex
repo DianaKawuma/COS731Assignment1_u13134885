@@ -1,0 +1,38 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\addtolength{\topmargin}{-2cm}
+
+\begin{document}
+\begin{titlepage}
+	
+	\begin{center}
+		% Upper part of the page       
+		\includegraphics[scale=1]{diagrams/up.png}\\ [1cm]
+		% Title
+		\rule{\linewidth}{0.5mm} \\[0.4cm]
+		{ \huge \bfseries Bellisimo
+			 \\ [0.5cm]Retrospective Report}\\[0.5cm]
+		\rule{\linewidth}{0.5mm} \\[0.4cm]	
+		
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+				Diana {Obo}
+				13134885
+			\end{flushleft}
+		\end{minipage}
+		
+	\end{center}
+\end{titlepage}
+
+\section{Report}
+\begin{enumerate}
+\item  I googled and watched alot of tutorials on how to do the features required for phase 2
+\item  I struggled alot to find tutorials that coded both in springboot and angular 2 for the shopping cart. Most tutorials used only springboot or only angular to perform the features required for phase 2
+\item I found register and login the easiest features to implement in phase 2
+\item I still used the monolithic architecture for phase 2, it evolved through  more interfaces needing to me created for the user profile, login, register and the shopping cart. 
+\item Since monolithic architectures are bulit as a single unit, adding more interfaces was challanging beacause finding where all the entities were and should be put in the folders was hard. Also debugging , interface modifications, adding capabilities, and other changes to applications, impacted the application as a whole, introducing downtime. 
+\item Microservices as an architecture should have been used for bellisimo beacause services exist as independent deployment artifacts and can be scaled independently of other services, so adding more interfaces would not be as challanging. Since  REST-ful API's were required for bellisimo,  they could  be consumed and reused by other services and applications without direct coupling through language bindings or shared libraries. Because microservices disperse functionality across multiple services, it  eliminates an applications susceptibility to a single point of failure. Resulting in applications which can perform better, experience less downtime and can scale on demand.
+\end{enumerate}
+
+
+\end{document}

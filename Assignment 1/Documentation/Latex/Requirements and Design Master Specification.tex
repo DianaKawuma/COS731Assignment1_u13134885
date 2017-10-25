@@ -31,7 +31,7 @@ Bellisimo is a company aimed at providing an online platform for customers to br
 The purpose of this document is to present the reader with a detailed description of the Bellisimo system. It will delve into the purpose and features of the system, the various interfaces of the system, the capabilities of the system, as well as the constraints under which the system must operate. The content of this document is intended for both the various stakeholders and the developers of the Bellisimo system.
 
 \subsection{Visions and Scope}
-The core of the system will be catalogues of items and their prices. Since Bellisimo is involved in clothing and food, the catalogues will have to ensure that these lines are well maintained. Sales and specials in each line will have to be accounted for and managed. The scope of the system is to ensure that the latest information is being provided about items and their prices.
+The core of the system will be catalogues of items and their prices. Since Bellisimo is involved in clothing and food, the catalogues will have to ensure that these lines are well maintained. Sales and specials in each line will have to be accounted for and managed. The scope of the system is to ensure that the latest information is being provided about items and their prices. A user should be able to buy items online.  
 
 \subsection{Architecture Design of Bellisimo System}
 At the highest level of granularity, the Bellisimo system is based on Monolithic architecture. Second level of granularity can be visualised as to be based on model-view-controller (MVC).
@@ -59,37 +59,62 @@ At the highest level of granularity, the Bellisimo system is based on Monolithic
 \end{enumerate}
 
 \subsection{Design Requirement}
-The system should be designed in such a way that there are two different interfaces that depict the clothing
-catalogue and the food catalogue.\\
-There should be at least two interfaces. An admin interface to maintain the catalogues and an anonymous
-user interface that will allow people to interactively view the catalogues.
-The prices of each item in the database should be displayed along with the image of the item.
+The system should be designed in such a way that there are four different interfaces that depict the clothing
+catalogue, the food catalogue, user profile and items in cart. The users should be able to register and login to the system.
+There should be at least two interfaces. An admin interface to maintain the catalogues and a
+user interface that will allow people to interactively view the catalogues and view, add,  remove  and update their items in the cart.
+The prices of each item in the database should be displayed along with the image of the item.  A user should also be able to view and update their user profiles.
+
 
 \section{User Management Module}
 \subsection{Scope}
-The scope of the user management module is shown in Figure 1. The user management module is responsible for maintaining information about the registered administrators of the system. Administrators can manage information about clothes and food catalogues. 
+The scope of the user management module is shown in Figure 1. The user management module is responsible for maintaining information about the registered users of the system. Administrators can manage information about clothes and food catalogues. A user is able to view and update their user profile.   
 \begin{figure}[h]
 \centering
 \includegraphics[scale=1]{diagrams/use.png}
 \end{figure}
 \begin{itemize}
-\item Administrator: A default administrator account will be on the database and the administrator need to only login to access the administrator interface. The administrator of the system will receive a guideline pdf on the details of the administrator password and username and how to change the details if required.
-\end{itemize}
+\item User: A user can register and login to the system to gain access to the user interface and once logged in, can view and update their profile.
+\item Administrator: A default administrator account will be on the database and the administrator need to only login to access the administrator interface. The administrator of the system will receive a guideline pdf on the details of the administrator password and username. The administrator will be allowed to change their details through the profile interface of the administrator.
 
+\end{itemize}
 \subsection{Domain Model}
 \begin{figure}[h]
 \centering
 \includegraphics[scale=1]{diagrams/usedom.png}
 \end{figure}
+\newpage
 \subsection{Service Contracts}
-The following services should be provided
-Precondition: adminName is a registered user
-Exception: If adminName is not a registered user throw \\noSuchAdmin exception
+\begin{itemize}
+\item The following services should be provided
+Precondition: username is a registered user.
+Exception: If username is not a registered user throw \\noUsername exception.
 Postcondition: No change
+\item The following services should be provided
+Precondition: username must not exist.
+Exception: If username exists throw \\usernameExists exception.
+Postcondition: No change
+\end{itemize}
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.7]{diagrams/useS.png}
 \end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.7]{diagrams/useR.png}
+\end{figure}
+\newpage
+\section{Shopping Cart Module} NOT IMPLEMENTED
+\subsection{Scope}
+The shopping cart module  will manage the log history  of alll the sales. the module will allow registered users to view the current items in the cart. The module will allow the registered users to add, remove and update items in the cart. the module will also allow registered users to checkout the items in the cart.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.7]{diagrams/cart.png}
+\end{figure}
+\section{Bank management  Module} NOT IMPLEMENTED
+\subsection{Scope}
+The banking management module will  use mocking to simulate the role of a  bank for electronic payment. The mocking will accept or decline the payment depending on some ratio. The transactions will be persisted if accepted and cancelled if declined.
 \section{Catalogue Management Module}
 \subsection{Scope}
 The catalogue management module will allow the administrator to add, remove and update any items in the catalogue list.
